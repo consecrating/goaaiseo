@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+.pnp.*
+.yarn/*
+**/__pycache__/
+*.py[cod]
+.venv/
+venv/
+.uv/
+
+# Build output
+dist/
+build/
+.next/
+out/
+*.tsbuildinfo
+target/
+
+# Env & secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Logs & caches
+*.log
+.turbo/
+.cache/
+coverage/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# WordPress plugin build
+wordpress/goaaiseo-wp/admin/build/
+wordpress/goaaiseo-wp/vendor/
+*.zip
