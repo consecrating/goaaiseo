@@ -39,6 +39,20 @@ The single-file master document is [`docs/BLUEPRINT.md`](docs/BLUEPRINT.md).
 
 ---
 
+## LIYA — The Decision-Intelligence Brain
+
+LIYA is the reasoning/operating intelligence that sits on top of the GOAAISEO engines — a
+self-improving, multi-agent Decision-Intelligence Search OS (memory, causal learning,
+forecasting, and economist-style resource allocation).
+
+| Doc | Focus |
+|-----|-------|
+| [LIYA v8.0 Specification](docs/liya/LIYA-v8-specification.md) | **Latest.** Multi-model edition — a *Model Cortex* that routes every task to Claude Opus 4.8, GPT-5.6 Sol, or ChatGPT, with cross-model verification, massive parallelism, computer-use execution, and effort-tier economics. |
+| [LIYA v7.0 Specification](docs/liya/LIYA-v7-specification.md) | Single-model predecessor — 30 modules, 10-agent society, causal learning loop, Bayesian portfolio decision engine. |
+| [Using LIYA](docs/liya/USING-LIYA.md) | **How to run LIYA in ChatGPT (Custom GPT / Projects) and in Kiro (steering / custom agent / spec-driven build).** |
+
+---
+
 ## The 30-Second Pitch
 
 Traditional SEO tools (Ahrefs, Semrush) are **estimation engines** built on third-party
