@@ -34,6 +34,7 @@ This repository contains the complete technical blueprint. Read in order, or jum
 | 11 | [Autonomous SEO Agent](docs/blueprint/11-autonomous-agent.md) | Agent / prompt / memory |
 | 12 | [Repository Structure](docs/blueprint/12-repository-structure.md) | Production monorepo layout |
 | 13 | [Implementation Roadmap](docs/blueprint/13-implementation-roadmap.md) | Phased delivery plan |
+| 14 | [Analysis-Layer Adoption](docs/blueprint/14-analysis-layer-adoption.md) | Buy vs. build: adopt `claude-seo` for analysis, build the loop |
 
 The single-file master document is [`docs/BLUEPRINT.md`](docs/BLUEPRINT.md).
 

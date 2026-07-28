@@ -54,6 +54,8 @@ flowchart TB
     P11 --> P4
     P12[12. Repo Structure] -.scaffolds.-> P2
     P13[13. Roadmap] -.sequences.-> P11
+    P14[14. Analysis-Layer Adoption<br/>adopt claude-seo] -.provides analysis.-> P3 & P5 & P6 & P7 & P8 & P9
+    style P14 fill:#639,stroke:#316,color:#fff
 ```
 
 ---
@@ -73,6 +75,7 @@ flowchart TB
 11. [Autonomous SEO Agent](blueprint/11-autonomous-agent.md) — plan/act/observe/reflect loop, 4-layer memory, closed-loop attribution, guardrails.
 12. [Repository Structure](blueprint/12-repository-structure.md) — production polyglot monorepo, CI/CD, conventions.
 13. [Implementation Roadmap](blueprint/13-implementation-roadmap.md) — 4 phases, ~70 EW, dependency graph, risks, MVP cut-line.
+14. [Analysis-Layer Adoption](blueprint/14-analysis-layer-adoption.md) — buy vs. build: adopt the open-source `claude-seo` engine for the analysis surface (Phases 3,5,6,7 + augment 8,9); build only the closed-loop moat.
 
 ---
 
