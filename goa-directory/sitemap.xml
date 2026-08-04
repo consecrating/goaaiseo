@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sample sitemap for the PRIMARY domain. Regenerate from your listing data on each publish. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url><loc>https://www.goa.sanctify.in/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+
+  <!-- Category pages -->
+  <url><loc>https://www.goa.sanctify.in/categories/accommodation-goa</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.goa.sanctify.in/categories/food-dining-goa</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.goa.sanctify.in/categories/spa-salon-goa</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.goa.sanctify.in/categories/home-office-interior-goa</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.goa.sanctify.in/categories/marketing-agency-goa</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Area landing pages (recommended new pages for local SEO) -->
+  <url><loc>https://www.goa.sanctify.in/areas/vasco</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.goa.sanctify.in/areas/margao</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.goa.sanctify.in/areas/panaji</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- Listing pages -->
+  <url><loc>https://www.goa.sanctify.in/listings/sanctify-digital-marketing-agency-goa</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.goa.sanctify.in/listings/rias-hair-beauty-salon-parlour-vasco-goa</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.goa.sanctify.in/listings/s-nizami-interior-decorator-pop-contractor-margao-goa</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+</urlset>

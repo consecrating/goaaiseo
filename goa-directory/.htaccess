@@ -1,0 +1,53 @@
+# ============================================================
+#  Goa Business Directory — PRIMARY domain .htaccess
+#  Use this on the chosen primary domain (recommended: goa.sanctify.in)
+# ============================================================
+
+Options -Indexes
+DirectoryIndex index.html
+
+# ---- Force HTTPS + www (canonical host) ----
+RewriteEngine On
+# HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# add www (change goa.sanctify.in to your chosen primary if different)
+RewriteCond %{HTTP_HOST} ^goa\.sanctify\.in$ [NC]
+RewriteRule ^ https://www.goa.sanctify.in%{REQUEST_URI} [L,R=301]
+
+# ---- Clean URLs: allow /page instead of /page.html ----
+# If a request has no extension and the .html file exists, serve it.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+# Redirect explicit .html to the clean URL (avoids duplicate content)
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# ---- Custom error page ----
+ErrorDocument 404 /404.html
+
+# ---- Gzip / Deflate compression ----
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml application/xml
+</IfModule>
+
+# ---- Browser caching ----
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# ---- Security headers ----
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(self), camera=(), microphone=()"
+</IfModule>

@@ -1,0 +1,25 @@
+# ============================================================
+#  SECONDARY domain .htaccess  (CONSOLIDATION STRATEGY — Option A)
+#  Put this file (renamed to ".htaccess") in the web root of EACH
+#  secondary domain you want to fold into the primary:
+#     goa.sanctify.biz, goa.sanctify.info, goa.sanctify.co.in, goa.sanctify.co
+#
+#  It 301-redirects EVERY URL to the same path on the primary domain
+#  (goa.sanctify.in), passing all the SEO authority to one strong site.
+#  This is the safest fix for duplicate content across your 5 subdomains.
+# ============================================================
+
+RewriteEngine On
+
+# Redirect all traffic (any host that served this file) to the primary,
+# preserving the full path + query string.
+RewriteCond %{HTTP_HOST} !^www\.goa\.sanctify\.in$ [NC]
+RewriteRule ^(.*)$ https://www.goa.sanctify.in/$1 [L,R=301]
+
+# ------------------------------------------------------------
+# NOTE (Option B — keep sites separate instead of redirecting):
+# If you decide NOT to consolidate, DELETE the rule above and instead:
+#   1. Serve UNIQUE content on each subdomain (different purpose per domain).
+#   2. Keep a self-referencing <link rel="canonical"> on every page.
+#   3. Never publish identical listing text on two domains.
+# ------------------------------------------------------------
