@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block internal search result pages from being indexed (thin/duplicate)
+Disallow: /search
+Disallow: /*?q=
+Disallow: /*?loc=
+
+Sitemap: https://www.goa.sanctify.in/sitemap.xml
