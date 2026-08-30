@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seo-engine"
+version = "0.1.0"
+description = "GOAAISEO engine: competitive keyword discovery, auto-interlinking, and proper alt text, wrapped in a safety layer that makes every change dry-run-first, validated, and reversible."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "../LICENSE" }
+authors = [{ name = "consecrating" }]
+keywords = ["seo", "goaaiseo", "keywords", "internal-linking", "alt-text", "accessibility"]
+
+# HTML parsing is the one hard dependency: a real DOM parser is what makes
+# link/alt-text edits safe (no regex string-mangling = no blunders).
+dependencies = [
+    "beautifulsoup4>=4.12",
+    "lxml>=4.9",
+]
+
+[project.optional-dependencies]
+# Live crawling of competitor / own URLs. Core works fully on provided HTML
+# without this, which keeps tests deterministic and offline.
+fetch = ["httpx>=0.25"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+seo-engine = "seo_engine.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/consecrating/goaaiseo"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
