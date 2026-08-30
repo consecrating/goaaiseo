@@ -43,3 +43,8 @@ Thumbs.db
 wordpress/goaaiseo-wp/admin/build/
 wordpress/goaaiseo-wp/vendor/
 *.zip
+
+
+# Python packaging artifacts
+*.egg-info/
+.pytest_cache/
